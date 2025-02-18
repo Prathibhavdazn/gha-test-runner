@@ -1,0 +1,17 @@
+name: Simple Workflow  # Workflow name
+
+on:  
+  push:
+    branches:
+      - main            # Runs when code is pushed to the main branch
+
+jobs:
+  hello_job:
+    runs-on: ubuntu-latest          # Use the latest Ubuntu runner
+
+    steps:
+      - name: Checkout Code  
+        uses: actions/checkout@v4     # Checks out repository code
+
+      - name: Print a Message  
+        run: echo "Hello, world of GitHub Actions!"     # Simple command to print a message
